@@ -1,0 +1,27 @@
+﻿@model Individual_project.Models.MFTForm
+
+
+    <div class="col-md-20">
+        @Html.LabelFor(m => Model.Events, "Event Type")<br />
+        @Html.DropDownListFor(m => Model.Events, new SelectList(Model.Events, "ID", "EventType"))
+    </div>
+
+    <div class="col-md-20">
+        @Html.LabelFor(m => Model.ObservableData, "Observable Data")<br />
+        @Html.DropDownListFor(m => Model.ObservableData, new SelectList(Model.ObservableData, "ID", "ObservableDataType"))
+    </div>
+
+    <div class="col-md-20">
+        @Html.LabelFor(m => Model.Locations, "Locations")<br />
+        @Html.DropDownListFor(m => Model.Locations, new SelectList(Model.Locations, "ID", "LocationType"))
+    </div>
+
+    <div class="col-md-20">
+        @Html.LabelFor(m => Model.Supervised, "Supervised By")<br />
+        @Html.DropDownListFor(m => Model.Supervised, new SelectList(Model.Supervised, "ID", "SuperviseType"))
+    </div>
+
+    <div class="col-md-20">
+        @Html.LabelFor(m => Model.SupervisorInitials, "Supervisor Initials")<br />
+        @Html.EditorFor(m => Model.SupervisorInitials)
+    </div>
