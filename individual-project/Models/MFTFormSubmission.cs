@@ -15,8 +15,8 @@ namespace Individual_project.Models
         public IList<Group> GroupLocations { get; set; }
         public IList<ObservableData> ObservableData { get; set; }
         public IList<Supervisor> Supervisors { get; set; }
-        public string SupervisorEmail { get; set; }
-        public bool SupervisorApproved { get; set; }
+        //public string SupervisorEmail { get; set; }
+        //public bool SupervisorApproved { get; set; }
         public string SupervisorInitials { get; set; }
         public string Comments { get; set; }
     }

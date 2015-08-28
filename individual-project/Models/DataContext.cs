@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace Individual_project.Models
+{
+    public class DataContext : DbContext
+    {
+        public IDbSet<Event> Events { get; set; }
+        public IDbSet<Group> Groups { get; set; }
+        public IDbSet<MFTFormSubmission> MFTForms { get; set; }
+        public IDbSet<ObservableData> ObservableData { get; set; }
+        public IDbSet<Supervisor> Supervisors { get; set; }
+        public IDbSet<User> Users { get; set; }
+    }
+}

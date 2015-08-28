@@ -9,5 +9,6 @@ namespace Individual_project.Models
     {
         public int Id { get; set; }
         public string SupervisorType { get; set; }
+        //public string SupervisorInitials { get; set; }
     }
 }
