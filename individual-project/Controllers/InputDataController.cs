@@ -9,29 +9,19 @@ namespace Individual_project.Controllers
 {
     public class InputDataController : Controller
     {
+        private Repository _repo = new Repository();
+
         // GET: InputData
         public ActionResult Index()
         {
-            //MFTFormSubmission model = new MFTFormSubmission();
-            //model.Events = new List<Event>();
-            //model.Events.Add(new Event { EventType = "IT - Individual Therapy", Id = 0});
-            //model.Events.Add(new Event { EventType = "GT - Group Therapy", Id = 1});
-            //model.Events.Add(new Event { EventType = "FT - Family Thearapy", Id = 2});
-            //model.Events.Add(new Event { EventType = "ITS - Individual Thearapy Supervised", Id = 3});
 
-            //model.GroupLocations = new List<Group>();
-            //model.GroupLocations.Add(new Group { GroupLocation = "Practicum Team", Id = 0 });
-            //model.GroupLocations.Add(new Group { GroupLocation = "Off-Site Team", Id = 1 });
+            var Events = new List<Event>();
 
-            //model.ObservableData = new List<ObservableData>();
-            //model.ObservableData.Add(new ObservableData { ObservableDataType = "Supervisor in Room", Id = 0 });
-            //model.ObservableData.Add(new ObservableData { ObservableDataType = "Used Recording", Id = 1 });
-
-            //model.Supervisors = new List<Supervisor>();
-            //model.Supervisors.Add(new Supervisor { SupervisorType = "AAMFT Approved Supervisor", Id = 0 });
-            //model.Supervisors.Add(new Supervisor { SupervisorType = "State LMFT Approved Supervisor", Id = 1 });
-            //model.Supervisors.Add(new Supervisor { SupervisorType = "Non-Approved Supervisor", Id = 2 });
-            return View();
+            Events = _repo.GetEvents();
+            
+            var vm = new MFTFormViewModel();
+            
+            return View(vm);
             
         }
 

@@ -1,27 +1,26 @@
-﻿@model Individual_project.Models.MFTForm
+﻿@model Individual_project.Models.MFTFormSubmission
 
-
-    <div class="col-md-20">
+    @*<div class="col-md-20">
         @Html.LabelFor(m => Model.Events, "Event Type")<br />
-        @Html.DropDownListFor(m => Model.Events, new SelectList(Model.Events, "ID", "EventType"))
-    </div>
+        @Html.DropDownListFor(m => Model.Events, new SelectList(Model.Events, "Id", "EventType"))
+    </div>*@
 
-    <div class="col-md-20">
+    @*<div class="col-md-20">
         @Html.LabelFor(m => Model.ObservableData, "Observable Data")<br />
-        @Html.DropDownListFor(m => Model.ObservableData, new SelectList(Model.ObservableData, "ID", "ObservableDataType"))
+        @Html.DropDownListFor(m => Model.ObservableData, new SelectList(Model.ObservableData, "Id", "ObservableDataType"))
     </div>
 
     <div class="col-md-20">
-        @Html.LabelFor(m => Model.Locations, "Locations")<br />
-        @Html.DropDownListFor(m => Model.Locations, new SelectList(Model.Locations, "ID", "LocationType"))
+        @Html.LabelFor(m => Model.GroupLocations, "Locations")<br />
+        @Html.DropDownListFor(m => Model.GroupLocations, new SelectList(Model.GroupLocations, "Id", "LocationType"))
     </div>
 
     <div class="col-md-20">
-        @Html.LabelFor(m => Model.Supervised, "Supervised By")<br />
-        @Html.DropDownListFor(m => Model.Supervised, new SelectList(Model.Supervised, "ID", "SuperviseType"))
+        @Html.LabelFor(m => Model.Supervisors, "Supervised By")<br />
+        @Html.DropDownListFor(m => Model.Supervisors, new SelectList(Model.Supervisors, "Id", "SuperviseType"))
     </div>
 
     <div class="col-md-20">
         @Html.LabelFor(m => Model.SupervisorInitials, "Supervisor Initials")<br />
         @Html.EditorFor(m => Model.SupervisorInitials)
-    </div>
+    </div>*@
